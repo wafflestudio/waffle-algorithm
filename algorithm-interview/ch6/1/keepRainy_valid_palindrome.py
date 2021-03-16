@@ -1,5 +1,5 @@
 #
-# BOJ
+# LeetCode
 # ver.Python
 #
 # Created by GGlifer
@@ -18,4 +18,12 @@ class Solution:
         s = s.lower()
         s = re.sub('[^a-z0-9]', '', s)
         return s == s[::-1]
+
+
+if __name__ == "__main__":
+    solution = Solution()
+
+    s = "A man, a plan, a canal: Panama"
+
+    print(solution.isPalindrome(s))
 
