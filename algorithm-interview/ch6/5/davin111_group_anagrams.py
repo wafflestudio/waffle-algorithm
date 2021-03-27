@@ -16,7 +16,7 @@ class Solution:
 
         anagrams = defaultdict(list)
         # O(nmlogm)
-        for string in strs:
+        for string in strs:  # O(n)
             count_list = list(Counter(string).items())  # O(m)
             count_list.sort()   # O(mlogm)
             count_tuple = tuple(count_list)
