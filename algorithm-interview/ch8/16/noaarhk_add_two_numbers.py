@@ -8,42 +8,42 @@ class ListNode:
         self.next = next
 
 
-# class Solution0:
-#
-#     # 연결리스트 뒤집기
-#     def reverseList(self, head: ListNode) -> ListNode:
-#         curr = head
-#         prev = None
-#         while curr:
-#             temp = curr.next
-#             curr.next = prev
-#             prev = curr
-#             curr = temp
-#         return prev
-#
-#     # 연결리스트를 파이썬리스트로
-#     def toList(self, curr: ListNode) -> List:
-#         list_py: List = []
-#         while curr:
-#             list.append(curr.val)
-#             curr = curr.next
-#         return list_py
-#
-#     def toReversedLinkedList(self, result: List) -> ListNode:
-#         prev = None
-#         for r in result:
-#             node = ListNode(r)
-#             node.next = prev
-#             prev = node
-#         return node
-#
-#     def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
-#         a = self.toList(self.reverseList(l1))
-#         b = self.toList(self.reverseList(l2))
-#
-#         resultStr = int(''.join(str(e) for e in a)) + int(''.join(str(e) for e in b))
-#
-#         return self.toReversedLinkedList(str(resultStr).split())
+class Solution0:
+
+    # 연결리스트 뒤집기
+    def reverseList(self, head: ListNode) -> ListNode:
+        curr = head
+        prev = None
+        while curr:
+            temp = curr.next
+            curr.next = prev
+            prev = curr
+            curr = temp
+        return prev
+
+    # 연결리스트를 파이썬리스트로
+    def toList(self, curr: ListNode) -> List:
+        list_py: List = []
+        while curr:
+            list_py.append(curr.val)
+            curr = curr.next
+        return list_py
+
+    def toReversedLinkedList(self, result: str) -> ListNode:
+        prev: ListNode = None
+        for r in result:
+            node = ListNode(r)
+            node.next = prev
+            prev = node
+        return node
+
+    def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
+        a = self.toList(self.reverseList(l1))
+        b = self.toList(self.reverseList(l2))
+
+        resultStr = int(''.join(str(e) for e in a)) + int(''.join(str(e) for e in b))
+
+        return self.toReversedLinkedList(str(resultStr))
 
 
 class Solution:
@@ -88,11 +88,10 @@ def print_list(l: ListNode):
         itr = itr.next
 
 
-
 if __name__ == '__main__':
-    solution = Solution()
+    solution = Solution0()
     l_1 = [2, 4]
     l_2 = [5, 6, 4]
     l1 = to_listnode(l_1)
     l2 = to_listnode(l_2)
-    print_list(solution.addTwoNumber(l1, l2))
+    print_list(solution.addTwoNumbers(l1, l2))
