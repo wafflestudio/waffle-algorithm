@@ -7,7 +7,7 @@
 # Open Source
 
 """
-739. Daily Temperatures
+232. Implement Queue using Stacks
 """
 
 from collections import deque

@@ -7,7 +7,7 @@
 # Open Source
 
 """
-739. Daily Temperatures
+225. Implement Stack using Queues
 """
 
 
