@@ -19,7 +19,7 @@ class Solution:
         return prev
 
 
-def to_list(l: List):
+def to_Linkedlist(l: List):
     head = ListNode(l[0])
     itr = head
     for val in l:
@@ -29,17 +29,17 @@ def to_list(l: List):
     return head
 
 
-def print_list(l: ListNode):
-    itr = l
+def print_list(linked_list: ListNode):
+    itr = linked_list
     while itr:
-        print(itr.val, end=' ')
+        print(itr.val)
         itr = itr.next
-    print()
+
 
 
 if __name__ == '__main__':
     a = [1, 2, 3, 4, 5]
-    b = to_list(a)
+    b = to_Linkedlist(a)
+    print_list(b)
     solution = Solution()
 
-    print_list(solution.reverse(b))

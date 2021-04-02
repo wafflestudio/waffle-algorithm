@@ -14,11 +14,16 @@ class Solution0:
     def reverseList(self, head: ListNode) -> ListNode:
         curr = head
         prev = None
+        # curr, prev = head, None
+
         while curr:
             temp = curr.next
             curr.next = prev
             prev = curr
             curr = temp
+            #
+
+
         return prev
 
     # 연결리스트를 파이썬리스트로
