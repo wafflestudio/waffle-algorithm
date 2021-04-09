@@ -11,7 +11,6 @@ class Solution:
             # set(s)의 원소{'a', 'b', 'c']에 대해서 rindex 함수 실행
             # 그중 제일 먼저 나오는 인덱스를 i로 저장
             i = min(map(s.rindex, set(s))) # set(s) -> O(n), s.rindex -> O(n) 따라서 O(n^2)
-            
             c = min(s[:i+1]) 
             # 마지막으로 등장하는 문자가 아닌 것들 + 마지막으로 등장하는 하나의 문자 중 알파벳 순으로 제일 작은 것 선택 (사전순으로 결과 저장하기 위해서)
             # O(n/상수)
