@@ -7,6 +7,7 @@ Memory Usage: 18.8 MB, less than 28.81% of Python3 online submissions for Top K 
 
 class Solution:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+        
         result =[]
         cnt = collections.Counter(nums) # |nums| =: n 일떄,  O(n)
         sorted_count = sorted(cnt.items(), key=lambda x: (-x[1], x[0])) # 정렬(팀 소트) -> O( (n/c)log(n/c)). 단, c는 상수.
