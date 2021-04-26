@@ -1,3 +1,12 @@
+/**
+ * DFS
+ * 
+ * 0ms, 6.6MB
+ * time complexity: O(n*m)
+ * n: length of input string(digits)
+ * m: length of one digit string('7': pqrs => 4)
+ */
+
 #include <vector>
 #include <string>
 using namespace std;
