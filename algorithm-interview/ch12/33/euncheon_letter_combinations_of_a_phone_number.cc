@@ -1,8 +1,8 @@
 /**
  * DFS
  * 
- * 0ms, 6.6MB
- * time complexity: O(n*m)
+ * 0ms, 6.6MB 
+ * time complexity: O(m^n * n! / (m! * (n-m)!) * m) =>  O(4^n)
  * n: length of input string(digits)
  * m: length of one digit string('7': pqrs => 4)
  */
