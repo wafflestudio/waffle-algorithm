@@ -17,10 +17,11 @@ class Solution:
 '''
                    1
                 / / \ \
-               2  3  4  5                    NC1 * N-1C1 * N-2C1 = N * N-1 * N-2 
+               2  3  4  5                    NC1 * N-1C1 * N-2C1 = N * N-1 * N-2  = N * ... n -k + 1 / k!
         [3 4 5]  [4 5] [4] [x]
 
         nCk = n!/((n-k)! * k!)
+        
         시간 복잡도 : O(n^k) ??     N * N-1 * N-2 + ... + N-1 * 
 
         https://stackoverflow.com/questions/53419536/what-is-the-computational-complexity-of-itertools-combinations-in-python
