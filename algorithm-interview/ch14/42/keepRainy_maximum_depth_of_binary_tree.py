@@ -43,33 +43,33 @@ class Solution:
         return dep
 
 
-def make_root(lst: List[int or None]) -> TreeNode or None:
+def make_tree(lst: List[int or None]) -> TreeNode or None:
     if not lst:
         return None
 
     root = TreeNode(lst[0])
 
-    def make_node(parent: TreeNode, idx: int):
+    def make_subtree(parent: TreeNode, idx: int):
         left_idx = 2 * idx + 1
         if left_idx < len(lst) and lst[left_idx] is not None:
             left_child = TreeNode(lst[left_idx])
-            parent.left = make_node(left_child, left_idx)
+            parent.left = make_subtree(left_child, left_idx)
 
         right_idx = 2 * idx + 2
         if right_idx < len(lst) and lst[right_idx] is not None:
             right_child = TreeNode(lst[right_idx])
-            parent.right = make_node(right_child, right_idx)
+            parent.right = make_subtree(right_child, right_idx)
 
         return parent
 
-    root = make_node(root, 0)
+    root = make_subtree(root, 0)
     return root
 
 
 if __name__ == "__main__":
     solution = Solution()
 
-    root = make_root([3, 9, 20, None, None, 15, 7])
+    root = make_tree([3, 9, 20, None, None, 15, 7])
 
     print(solution.maxDepth(root))
 
