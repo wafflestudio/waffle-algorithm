@@ -33,7 +33,7 @@
         }
         max = Math.max(l+r, max) // 현재 루트를 root를 지나지 않는 경로중 max값 저장.
 
-        return Math.max(l,r)  // 상위의 재귀호출에 루트를 지나는 최대 depth 전달
+        return Math.max(l,r)  // 상위의 재귀호출에 루트를 지나는 최대 경로길이 전달
     }
     dfs(root)
     return max;
